@@ -1,4 +1,5 @@
-﻿import os
+import os
+import sys
 import subprocess
 
 from PySide6.QtWidgets import (
@@ -6,6 +7,14 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtCore import Qt, QSize
+
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 
 class GameCard(QWidget):
@@ -55,17 +64,17 @@ class GameCard(QWidget):
         btn_layout.setSpacing(8)
 
         play_btn = QPushButton()
-        play_btn.setIcon(QIcon("assets/play.png"))
+        play_btn.setIcon(QIcon(resource_path("assets/play.png")))
         play_btn.setIconSize(QSize(22, 22))
         play_btn.clicked.connect(self.play_game)
 
         folder_btn = QPushButton()
-        folder_btn.setIcon(QIcon("assets/folder_icon.png"))
+        folder_btn.setIcon(QIcon(resource_path("assets/folder_icon.png")))
         folder_btn.setIconSize(QSize(22, 22))
         folder_btn.clicked.connect(self.open_folder)
 
         delete_btn = QPushButton()
-        delete_btn.setIcon(QIcon("assets/trash.png"))
+        delete_btn.setIcon(QIcon(resource_path("assets/trash.png")))
         delete_btn.setIconSize(QSize(22, 22))
         delete_btn.clicked.connect(self.delete_game)
 
