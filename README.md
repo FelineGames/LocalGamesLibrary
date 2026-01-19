@@ -20,4 +20,7 @@
 • **Visual Studio** (Python Development Workload)
 
 • Project Type; **Python Application**
- 
+
+• Application Development Framework:
+[Tkinter] ❌
+[PyQt6] ✅
