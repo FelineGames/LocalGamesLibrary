@@ -9,8 +9,9 @@
 
 • Edit Game Icon, Title, Description & Author!
 
+• **Settings** Enables you to change Main Header (e.g. Library is Default) and Also see Developer Credits [_More Features Coming Soon_]
+
   ## What's NOT Present (yet)
-• Settings Functionality (Greyed-out)
 
 • Auto-detect **Game Folders** (Default: Desktop\Saves\<YourGame>)
 
